@@ -1,0 +1,65 @@
+body {
+  font-family: "Smooch Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(69, 208, 246, 1) 90%
+  );
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 800;
+  word-spacing: 2px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 70vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.span-three {
+  grid-row: span 2;
+}
+
+#inputext {
+  all: unset;
+  grid-column: 1 / -1;
+  background-color: rgb(153, 220, 238);
+  display: flex;
+  text-align: end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
